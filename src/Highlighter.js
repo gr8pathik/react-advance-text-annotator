@@ -1,8 +1,6 @@
-/* @flow */
 import { findAll } from 'highlight-words-core'
 import PropTypes from 'prop-types'
 import { createElement } from 'react'
-import memoizeOne from 'memoize-one'
 
 Highlighter.propTypes = {
   activeClassName: PropTypes.string,
@@ -75,7 +73,7 @@ export default function Highlighter ({
     }
     return mapped
   }
-  const memoizedLowercaseProps = memoizeOne(lowercaseProps)
+  const memoizedLowercaseProps = lowercaseProps;
 
   return createElement('span', {
     className,
