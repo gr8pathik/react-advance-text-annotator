@@ -119,7 +119,7 @@ describe('TextAnnotator', () => {
       )
     }).toThrowError()
   })
-  it.only('Should give an result if the searchWord is an array of object and the searchAccessor is defined', () => {
+  it('Should give an result if the searchWord is an array of object and the searchAccessor is defined', () => {
     const Marker = () => <div>Marked Text</div>;
     const { container } = render(
       <TextAnnotator
